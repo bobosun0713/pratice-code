@@ -1,0 +1,66 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 200vh;
+    }
+
+    .banner-wrap {
+        position: relative;
+        height: 100vh;
+    }
+
+    .banner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #eee;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s;
+    }
+
+    .banner__image {
+        opacity: 0;
+        position: absolute;
+        background-image: url('https://picsum.photos/id/237/1920/1200');
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner__image--animate {
+        animation: changeImage 10s linear;
+    }
+
+    .banner--scroll {
+        width: 1200px;
+        height: 300px;
+    }
+
+    @keyframes changeImage {
+        0% {
+            background-size: 150% auto;
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 0;
+        }
+
+        100% {
+            background-size: 120% auto;
+            opacity: 0;
+        }
+    }
